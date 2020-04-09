@@ -18,7 +18,8 @@ const chooseRecipe = function (bakeryA, bakeryB, recipes) {
         return bakeryARecipes[j];
       }
     }
-  } return 'No matches found!';
+  } 
+  return 'No matches found!';
 };
 
 let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];

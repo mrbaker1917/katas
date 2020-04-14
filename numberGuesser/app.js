@@ -1,12 +1,16 @@
 let prompt = require("./node_modules/prompt-sync")();
 //generate random number
-const randomNumber = Math.floor(Math.random() * 100);
-
+const ranNum = function (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+};
+const randomNumber = ranNum(1, 101);
 // set counter and array of guessed numbers
 let counter = 1;
 let guessed = [];
 //set prompt
-let answer = prompt("Guess a number between 1 and 100: ");
+let answer = prompt("Let's play Number Guess! Guess a number between 1 and 100: ");
 //run while loop
 while (answer !== randomNumber) {
   if (!Number(answer)) {
